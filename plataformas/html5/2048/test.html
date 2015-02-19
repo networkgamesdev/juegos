@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>timer</title>
+<script>
+
+var CCOUNT = 80;
+var count = CCOUNT;
+var t = null;
+var timespan;
+
+window.onload = init;
+
+function init(){
+ timespan = document.getElementById('timespan');
+ document.getElementById('btnStart').onclick = start;
+ document.getElementById('btnPause').onclick = cdpause;
+ document.getElementById('btnReset').onclick = cdreset;
+ cddisplay();
+}
+
+function cddisplay() {
+  timespan.innerHTML = "Time Left: " + count;
+}
+   
+function start(){ // starts countdown
+  if (t==null && count>0){
+    timespan.style.color = 'red';
+    countdown();
+  }
+}
+
+function countdown() {
+  cddisplay();
+  if (count == 0) {
+    timespan.style.color = 'black';
+    alert('time is up');
+    location.reload(); // reload page
+  }else{
+     count--;
+     t = setTimeout("countdown()", 1000);
+  }
+}
+   
+function cdpause() { // pauses countdown
+  clearTimeout(t);
+  t = null;
+  timespan.style.color = 'black';
+}
+   
+function cdreset() { // resets countdown
+  cdpause();
+  count = CCOUNT;
+  cddisplay();
+  t = null;
+  timespan.style.color = 'black';
+}
+   
+</script>
+</head>
+ 
+<body>
+
+<span id="timespan"></span><hr/>
+<input type="button" value="Start" id="btnStart"/>
+<input type="button" value="Pause"  id="btnPause"/>
+<input type="button" value="Reset" id="btnReset"/>
+
+</body>
+</html>
