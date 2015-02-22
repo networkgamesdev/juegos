@@ -7,35 +7,98 @@
   <link href="style/main.css" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="keywords" content="HTML,CSS,Javascript,Make your own 2048,Play 2048">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
+  <meta name="keywords" content="Network games 2048">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
   <meta name="format-detection" content="telephone=no" />
 
-  <meta property="og:title" content="2048 game"/>
-  <meta property="og:site_name" content="2048 game"/>
-  <meta property="og:description" content="Play Udacity 2048. Then, make your own 2048 game in Udacity's 2 hour mini course for programming beginners!"/>
-  <meta property="og:image" content="http://gabrielecirulli.github.io/2048/meta/og_image.png"/>
+  <!-- Menu -->
+  <link rel="stylesheet" href="style/menu.css" media="screen" type="text/css" />
+  <script src="js/modernizr.js"></script>
+  <!-- Fin Menu -->
+
 </head>
 <body>
-  <div class="container">
-  
 
-    <img class="img-logoPrincipal" src="img/logoPrincipal.png"/>
-
-    <a class="btn-menu-principal" href="juego.html">Jugar</a>
-    <a class="btn-menu-principal" href="comoJugar.html">Como Jugar</a>
-    <!-- <a class="btn-menu-principal">Tabla de Posiciones</a> -->
-    <a class="btn-menu-principal" href="creditos.html">Creditos</a>
+  <!-- Menu -->
+  <nav class="site-navbar">
+    <input type="checkbox" id="toggle_menu" class="toggle-menu-checkbox" />
+    <label for="toggle_menu" class="toggle-menu-label uppercase"></label>
+    <input type="checkbox" id="toggle_overlay" class="toggle-overlay-checkbox" />
+    <label for="toggle_menu" class="toggle-overlay-label uppercase"></label>
     
+    <ul class="site-menu">
+      <li class="site-menu-item current"><span>Nombre Jugador</span></li>
+      <li class="site-menu-item current"><a href="index.html">Juego</a></li>
+      <li class="site-menu-item"><a href="#!">Tabla de Posiciones</a></li>
+      <li class="site-menu-item"><a href="login.html">Iniciar Sesion</a></li>
+      <li class="site-menu-item"><a href="comoJugar.html">Como Jugar</a></li>
+      <li class="site-menu-item"><a href="creditos.html">Creditos</a></li>
+    </ul>
+
+  </nav>
+  <!-- Fin Menu -->
+
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">
+        <a class="restart-button">Nuevo Juego</a>
+      </p>
+      
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">	      
+          <a class="retry-button">Jugar de Nuevo</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
   </div>
 
-  <script type="text/javascript" src="cordova.js"></script>
+  <!-- Scripts del Juego 2048 -->
   <script src="js/bind_polyfill.js"></script>
   <script src="js/classlist_polyfill.js"></script>
   <script src="js/animframe_polyfill.js"></script>
@@ -46,7 +109,9 @@
   <script src="js/local_storage_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <!-- Fin Scripts del Juego 2048 -->
+
+  <script src='js/jquery.js'></script>
 
 </body>
 </html>

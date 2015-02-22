@@ -24,11 +24,11 @@ span.tile-text {
 
 input {
   display: inline-block;
-  background: #8f7a66;
+  background: #ffffff;
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
-  color: #f9f6f2;
+  color: #1e6477;
   height: 40px;
   line-height: 42px;
   cursor: pointer;
@@ -37,22 +37,13 @@ input {
   outline: none;
   box-sizing: border-box;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 10px; 
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; }
-  input[type="text"], input[type="email"] {
-    cursor: auto;
-    background: #fcfbf9;
-    font-weight: normal;
-    color: #776e65;
-    padding: 0 15px; }
-    input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder {
-      color: #9d948c; }
-    input[type="text"]::-moz-placeholder, input[type="email"]::-moz-placeholder {
-      color: #9d948c; }
-    input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder {
-      color: #9d948c; }
+  appearance: none; 
+  width: 100%
+
+  }
 
 .heading:after {
   content: "";
@@ -638,7 +629,9 @@ hr {
 
   .container {
     width: 280px;
-    margin: 0 auto; }
+    margin: 0 auto; 
+    padding-top: 20px;
+  }
 
   .score-container, .best-container {
     margin-top: 0;
@@ -689,7 +682,7 @@ hr {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(238, 228, 218, 0.73);
+    background: rgba(30, 100, 119, 0.76);
     z-index: 100;
     padding-top: 40px;
     text-align: center;
@@ -1023,8 +1016,6 @@ a.retry-button {
 
 
 /**  NG Stile */
-
-
 .img-logoPrincipal{
     width:100%;
     margin-top: 10px;
@@ -1039,16 +1030,16 @@ a.retry-button {
 }
 
 .btn-menu-principal {
-  display: inline-block;
-  background: #1e6477;
-  border-radius: 3px;
-  padding: 0 20px; 
-  text-decoration: none;
-  color: #f9f6f2;
-  line-height: 42px;
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  float: right; 
-  margin-top: 10px;
+    display: inline-block;
+    background: #1e6477;
+    border-radius: 3px;
+    padding: 0 20px; 
+    text-decoration: none;
+    color: #f9f6f2;
+    line-height: 42px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    float: right; 
+    margin-top: 10px;
 }

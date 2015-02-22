@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="style/menu.css" media="screen" type="text/css" />
   <script src="js/modernizr.js"></script>
   <!-- Fin Menu -->
+
 </head>
 <body>
 
@@ -42,21 +43,15 @@
   <div class="container">
 
     <p class="game-explanation">
-      <strong class="important">Como jugar:</strong> El objetivo del juego es combinar fichas iguales que esten juntas con el fin de alcanzar el máximo de fichas '2048 'y ganar el juego!
+      Por favor ingrese su usuario y clave para poder jugar.
     </p>
 
-    <p class="game-explanation">
-      El área de juego 2048 es una cuadrícula de 4x4 con 16 casillas cuadradas. Al principio del juego, tiene dos fichas con un 'número '2 interior.
-    </p>
+    <hr/>
 
-    <p class="game-explanation">
-      Cuando usted junta 2 fichas con el mismo número, estas en el interior se unen, se crea una nueva ficha con la suma del valor de las dos fichas : 2 +2 = 4, 4 +4 = 8, 1024 ... 1024 = 2048 !
-    </p>
+    <input type="text" name="usuario" id="usuario" value="" placeholder="Usuario">          
+    <input type="password" name="clave" id="clave" value="" placeholder="Clave">
 
-    <p class="game-explanation">
-      Para mover las fichas, sólo tienes que elegir una dirección  (arriba, derecha, abajo o izquierda) y deslizar con el dedo en la dirección deseada. Todas las fichas se mueven en la dirección elegida, hasta que se unen con una ficha que tiene el mismo número o son bloqueados por una ficha con un número diferente.
-    </p>
-
+    <a class="btn-menu-principal" href="#">Iniciar Sesion</a>
 
     
   </div>
@@ -73,6 +68,7 @@
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
   <!-- Fin Scripts del Juego 2048 -->
+ 
 
   <script src='js/jquery.js'></script>
 
